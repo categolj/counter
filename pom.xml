@@ -65,12 +65,12 @@
 				<executions>
 					<execution>
 						<id>copy-resource-one</id>
-						<phase>generate-sources</phase>
+						<phase>prepare-package</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.directory}/wasm
+							<outputDirectory>${project.basedir}/fly/app
 							</outputDirectory>
 							<resources>
 								<resource>
@@ -78,6 +78,13 @@
 									</directory>
 									<includes>
 										<include>counter.toml</include>
+									</includes>
+								</resource>
+								<resource>
+									<directory>${project.build.directory}/wasm
+									</directory>
+									<includes>
+										<include>counter.wasm</include>
 									</includes>
 								</resource>
 							</resources>
