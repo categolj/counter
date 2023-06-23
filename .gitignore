@@ -37,6 +37,7 @@ build/
 ### Mac OS ###
 .DS_Store
 
-fly/app/counter.*
+fly/app/**/*.wasm
+fly/app/**/*.toml
 .wws
 .idea
